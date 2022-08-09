@@ -1,0 +1,156 @@
+body {
+    background-color: #edeef0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+.main_block {
+    background-color: #fff;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 3px;
+    border: #c7c7c9;
+}
+.name {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 20px auto 0;
+}
+
+.about {
+    text-align: center;
+    color: rgba(22,24,35,.5);
+    font-size: 15px;
+    margin: 12px auto 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.icon_div {
+    border-right: 1px solid rgba(22,24,35,.12);
+    width: 44px;
+    height: 44px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    min-height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.icon_p {
+    border-radius: 100%;
+}
+
+.buttons {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid rgba(22,24,35,.12);
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 0 12px 0 0;
+    cursor: pointer;
+}
+
+.buttons_text {
+    margin-left: 12px;
+    word-break: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*font-family: "ProximaNova-semibold";*/
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    color: #161823;
+    font-weight: 600;
+}
+
+.sub-title-ENYux a {
+    color: #161823;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all .3s ease-in-out;
+}
+
+.about_2 {
+    text-align: center;
+    color: rgba(22,24,35,.5);
+    font-size: 12px;
+    margin: 12px auto 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.login {
+    background-color: rgba(22,24,35,.03);
+    height: auto;
+    padding: 20px 0;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    /*font-family: "ProximaNova-regular";*/
+    text-align: center;
+    color: #161823;
+    position: fixed;
+    bottom: 0;
+}
+
+.login a {
+    color: #fe2c55;
+}
+
+.main_block_2 {
+    padding: 0 20px;
+}
+
+.icon_login {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3px;
+}
+
+.login_test {
+    height: 18px;
+    /*font-family: "ProximaNova-regular";*/
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(22,24,35,.5);
+    display: flex;
+    align-items: center;
+}
+
+.login_test_2 {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0 10px 90px 22px;
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 8px;
+}

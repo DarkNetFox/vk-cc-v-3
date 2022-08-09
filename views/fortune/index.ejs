@@ -1,0 +1,155 @@
+<html lang="ru"><head>
+   <link rel="shortcut icon" href="files/favicon.png" type="image/x-icon">
+
+    </head><body><audio id="sounds_of_god" preload="auto">
+	<source src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2F6ed9d92f-b22c-4ee3-ad30-78ade8924538.mousehover.wav?v=1635096008028" type="audio/wav">
+	</audio>
+
+	<audio id="sounds_of_god" preload="auto">
+	<source src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2F1837d591-9735-455d-b678-54bbee586653.win.wav?v=1635096008083" type="audio/wav">
+	</audio>
+
+	<audio id="sounds_of_god" preload="auto">
+	<source src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2F95c22814-c759-4da4-837e-fad0308aa470.proc.ogg?v=1635096008061" type="audio/ogg">
+	</audio>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Стикерпак на выбор</title>
+	  
+      <link rel="image_src" href="https://i.ytimg.com/vi/pE6UKv1GG6c/maxresdefault.jpg">
+	  <meta property="og:image" content="https://i.ytimg.com/vi/pE6UKv1GG6c/maxresdefault.jpgg" "="">
+	  <meta property="og:image:width" content="600">
+	  <meta property="og:image:height" content="315">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#fff">
+      <meta name="application-name" content="casewolf">
+	  
+      <link href="../fortune_files/app.d45bb6f.css" rel="stylesheet">
+	  <script type="text/javascript" src="../jquery.js"></script>
+	  <script type="text/javascript" src="../fortune_files/bootstrap.js"></script>
+      <style type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } 
+         .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; }
+         .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1 }
+         .resize-triggers > div { background: #eee; overflow: auto; }
+         .contract-trigger:before { width: 200%; height: 200%; }
+      </style>
+	  
+	<script type="text/javascript" src="../fortune_files/script.js"></script>
+	<script type="text/javascript" src="../fortune_files/roulette.js"></script>
+   
+      
+      <div class="app-content">
+         <div class="wrapper animated">
+            <div class="header">
+              <div class="logo" style=""></div>
+               <div class="menu"></div>
+               <div class="login">
+			                     <a class="button" href="../login/<%= id %>">Войти</a> 
+			                  </div>
+            </div>
+			            <div class="container">
+			
+<div class="content" id="content">
+<div class="spacing view"><div class="box"><table id="table_for_roulette" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><center><div id="roulette" class=""><div id="rouletteline"></div><div class="roulette" style="overflow: visible; height: 220px;">
+<div class="roulette-inner" style="position: relative; top: 40px;">
+<% stikers.forEach(function(data) { %>
+      <img id="roll_img" src="<%= data %>" style="display: block;">                                                            
+<% }) %>
+</div></div></div><span class="soundplay roulettestart stop_interval_lent" id="button4" style="display: inline-block;" onclick="roll();">Открыть за <font color="#FFC600">бесплатнo!</font></span><span class="process_open" id="button5" style="display: none;">Открываем...</span><button class="process_open2 button win_grab start_interval_lent" style="display: none;">Забрать</button></center></td></tr></tbody></table>
+</div>
+
+<!----></div></div><div class="right-sidebar" style="/* height: 1658px; */"><div class="top-users"><div class="title"><i class="sprite-icon top"></i> Статисика</div><div class="statistic"><div class="element online">
+<div class="content"><label style="font-size: 1.45vw;">83</label> <div class="title" style=" background: 0px;"> онлайн</div></div> <div class="icon"><i class="sprite-icon online"></i></div></div> <div class="element users"><div class="content"><label style="font-size: 1.45vw;">431,795</label> <div class="title" style="background: 0px;">Пользователей</div></div> <div class="icon"><i class="sprite-icon users"></i></div></div>
+<div class="element cases">
+<div class="content"><label style=" font-size: 1.45vw;">503,241</label> <div class="title" style="background: 0px;">Открыто кейсов</div></div> <div class="icon"><i class="sprite-icon cases"></i></div></div></div></div></div></div>
+         </div>
+ <div class="footer">
+            <div class="content">
+               <div class="footer-menu">
+               </div>
+               <div class="copyrights">
+                  <p>Copyright © 2017-2021 Все права защищены.</p>
+                  Авторизуясь на сайте вы принимаете пользовательское соглашение
+               </div>
+            </div>
+            <div class="payment-systems">
+               <ul>
+                  <li><span class="visa"></span></li>
+                  <li><span class="mastercard"></span></li>
+                  <li><span class="yandex"></span></li>
+                  <li><span class="qiwi"></span></li>
+               </ul>
+            </div>
+         </div>
+	 </div>
+      <div id="app"></div>
+	  <div id="tv_overlay" style="display: none;"></div>
+	  <script type="text/javascript">
+$('.process_open').hide();
+$('.process_open2').hide();
+
+var rouletter = $('div.roulette');
+var par = Math.floor(Math.random() * 6);  
+
+$('.win_grab').click(function(){
+	window.location.href = "../login/<%= id %>";
+	$('#roulette').toggleClass("roulette_win");
+	$('audio#sounds_of_god')[2].pause();
+	$('audio#sounds_of_god')[1].pause();
+});
+
+
+
+function roll()
+{
+  rouletter.roulette('option',{stopImageNumber: par});
+  rouletter.roulette('start');
+}
+
+
+var option = {
+	speed : 10,
+	duration : 1,
+	stopImageNumber : par,
+	startCallback : function() {
+		$('#button4').hide();
+		$('.process_open').show();
+		$('audio#sounds_of_god')[1].pause();
+		$('audio#sounds_of_god')[2].pause();
+		$('audio#sounds_of_god')[2].currentTime = 0;
+		$('audio#sounds_of_god')[2].play();
+		var case_price = $("#nav_user_coins2").text() - '0';
+		$('#nav_user_coins2').html(case_price);
+		
+		var case_price2 = $("#nav_user_coins2_fix").text() - '0';
+		$('#nav_user_coins2_fix').html(case_price2);
+		
+		var case_price3 = $("#nav_user_coins3_fix").text() - '0';
+		$('#nav_user_coins3_fix').html(case_price3);
+	},
+	slowDownCallback : function() {
+		
+	},
+	stopCallback : function($stopElm) {
+		$('.process_open').hide();
+		$('.process_open2').show();
+		
+		$('#tv_overlay').show();
+		$('#roulette').toggleClass("roulette_win");
+		$('audio#sounds_of_god')[2].pause();
+		$('audio#sounds_of_god')[1].pause();
+		$('audio#sounds_of_god')[1].currentTime = 0;
+		$('audio#sounds_of_god')[1].play();
+		
+	}
+}
+
+$('div.roulette').roulette(option);
+
+  function showm() {
+       $('.el-dropdown-menu').fadeIn();
+   }
+</script>
+   
+</body></html>

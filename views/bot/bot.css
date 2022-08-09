@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #edeef0;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif;
+    background-color: #4bf087;
+}
+
+.text {
+  margin-top: 5%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.text_1 {
+  margin-top: 5%;
+  margin-bottom: 25px;
+  color: #000000;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #edeef0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #e7e8ec;
+  border-radius: 17px;
+  border-color: #3093f1;
+}

